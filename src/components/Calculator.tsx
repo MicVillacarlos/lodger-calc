@@ -173,6 +173,19 @@ export default function Calculator() {
               </div>
             </div>
             <div className="rounded-md border p-3">
+              <div>New Monthly Given (for Water)</div>
+              <div className="text-foreground font-medium">
+                {formData.current_bill !== "" &&
+                formData.monthly_given_bill !== "" &&
+                formData.add_on !== ""
+                  ? (
+                      Number(formData.monthly_given_bill) -
+                      Number(formData.add_on)
+                    ).toFixed(2)
+                  : "—"}
+              </div>
+            </div>
+            <div className="rounded-md border p-3">
               <div>Total Add-On</div>
               <div className="text-foreground font-medium">
                 {formData.current_bill !== "" &&

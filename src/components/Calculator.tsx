@@ -178,9 +178,12 @@ export default function Calculator() {
                 {formData.current_bill !== "" &&
                 formData.monthly_given_bill !== "" &&
                 formData.add_on !== ""
-                  ? Number(formData.current_bill) /
-                      Number(formData.monthly_given_bill) +
-                    formData.add_on
+                  ? (
+                      Number(formData.current_bill) /
+                      (Number(formData.current_bill) /
+                        Number(formData.monthly_given_bill) +
+                        Number(formData.add_on))
+                    ).toFixed(4)
                   : "—"}
               </div>
             </div>

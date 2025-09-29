@@ -91,7 +91,7 @@ export default function Calculator() {
           <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="space-y-2 ">
-                <Label htmlFor="past_reading">Past Reading</Label>
+                <Label htmlFor="past_reading">Previoues Meter Reading</Label>
                 <Input
                   id="past_reading"
                   type="number"
@@ -127,7 +127,7 @@ export default function Calculator() {
 
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="present_reading">Present Reading</Label>
+                <Label htmlFor="present_reading">Current Meter Reading</Label>
                 <Input
                   id="present_reading"
                   type="number"
@@ -173,7 +173,7 @@ export default function Calculator() {
               </div>
             </div>
             <div className="rounded-md border p-3">
-              <div>New Monthly Given (for Water)</div>
+              <div>New Monthly Given</div>
               <div className="text-foreground font-medium">
                 {formData.current_bill !== "" &&
                 formData.monthly_given_bill !== "" &&
@@ -188,7 +188,7 @@ export default function Calculator() {
               </div>
             </div>
             <div className="rounded-md border p-3">
-              <div>Total Add-On</div>
+              <div>Consumption Reading</div>
               <div className="text-foreground font-medium">
                 {formData.current_bill !== "" &&
                 formData.monthly_given_bill !== "" &&
